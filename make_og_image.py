@@ -62,7 +62,7 @@ for tag in tags:
     tx += tw + pad * 2 + 16
 
 # CTA / url
-draw.text((x, 500), "minghuama233.github.io", font=url_f, fill=(148, 163, 184))
+draw.text((x, 500), "minghua-ma.github.io", font=url_f, fill=(148, 163, 184))
 
 bg.save("images/og-image.png", "PNG")
 print("Wrote images/og-image.png", bg.size)

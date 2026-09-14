@@ -1,0 +1,161 @@
+\documentclass[10pt,letterpaper]{article}
+
+\usepackage[margin=0.55in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{charter}          % clean, professional serif
+\usepackage[scaled=0.92]{helvet} % sans for headings
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{tabularx}
+\usepackage[hidelinks]{hyperref}
+
+% ---- Colors ----
+\definecolor{accent}{HTML}{1F3B6E}     % deep navy
+\definecolor{rulegray}{HTML}{B8C2CC}
+\definecolor{subtle}{HTML}{555555}
+
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+% ---- Section headings (sans-serif, uppercase, rule underneath) ----
+\titleformat{\section}
+  {\normalfont\sffamily\bfseries\large\color{accent}}
+  {}{0em}{\MakeUppercase}[{\color{rulegray}\titlerule[1pt]}]
+\titlespacing{\section}{0pt}{1.5ex}{0.7ex}
+
+% ---- Lists ----
+\setlist[itemize]{leftmargin=1.25em, itemsep=0.25ex, topsep=0.3ex, parsep=0pt}
+\setlist[description]{leftmargin=0em, itemsep=0.5ex, topsep=0.3ex,
+  font=\normalfont\bfseries\color{accent}}
+
+% ---- Helpers ----
+\newcommand{\dated}[2]{\noindent{\textbf{#1}\hfill{\color{subtle}\small #2}}\par}
+\newcommand{\pub}[3]{\item {\color{accent}\textbf{[#3'#2]}}\; #1.}
+
+\setlength{\parindent}{0pt}
+\setlength{\tabcolsep}{0pt}
+\pagestyle{empty}
+
+\begin{document}
+
+% ================= HEADER =================
+\begin{minipage}[b]{0.62\textwidth}
+  {\sffamily\bfseries\Huge\color{accent} Minghua Ma}\\[0.7ex]
+  {\sffamily\large Senior Researcher \textnormal{·} Microsoft M365 Research}
+\end{minipage}\hfill
+\begin{minipage}[b]{0.36\textwidth}
+  \raggedleft\small
+  \href{mailto:minghuama@microsoft.com}{minghuama@microsoft.com}\\[0.3ex]
+  Redmond, WA, USA\\[0.3ex]
+  \href{https://minghua-ma.github.io/}{minghua-ma.github.io}\\[0.3ex]
+  \href{https://scholar.google.com/citations?user=A8It-HkAAAAJ}{Scholar} \textnormal{·}
+  \href{https://www.linkedin.com/in/minghua-ma-547202100/}{LinkedIn} \textnormal{·}
+  \href{https://orcid.org/0000-0002-6303-1731}{ORCID}
+\end{minipage}
+
+\vspace{0.7ex}
+{\color{accent}\rule{\linewidth}{1.5pt}}
+\vspace{0.5ex}
+
+\noindent
+Senior Researcher working on \textbf{AIOps}: AI systems that autonomously detect, diagnose, and resolve failures in
+large-scale cloud infrastructure, improving the reliability of services used by millions. Research published at
+top venues (ICSE, FSE, ASE, KDD, VLDB, MLSys) and deployed in production at Microsoft.
+IEEE Senior Member and CCF Senior Member.
+
+% ================= RESEARCH INTERESTS =================
+\section{Research Interests}
+\vspace{-0.2ex}
+AIOps \textnormal{·} Cloud Reliability \textnormal{·} Incident Management \textnormal{·} AI Agents for Software
+Engineering \textnormal{·} Anomaly Detection \textnormal{·} Large Language Models for Systems
+
+% ================= EXPERIENCE =================
+\section{Experience}
+\dated{Microsoft}{2021–Present}
+\vspace{0.2ex}
+\begin{tabularx}{\linewidth}{@{}p{1.2em}X r@{}}
+  & Senior Researcher, M365 Research, Redmond, WA & {\color{subtle}\small 2024–Present}\\
+  & Senior Researcher, DKI, Beijing, China & {\color{subtle}\small 2023–2024}\\
+  & Researcher, Microsoft Research Asia (MSRA), Beijing, China & {\color{subtle}\small 2021–2023}\\
+\end{tabularx}
+
+% ================= EDUCATION =================
+\section{Education}
+\begin{tabularx}{\linewidth}{@{}X r@{}}
+  \textbf{Tsinghua University}, Ph.D., Computer Science and Technology & {\color{subtle}\small 2016–2021}\\
+\end{tabularx}
+{\color{subtle}\small\hspace{1.2em}Advised by Prof.\ Dan Pei, Netman Group.}\par
+\vspace{0.5ex}
+\begin{tabularx}{\linewidth}{@{}X r@{}}
+  \textbf{Georgia Institute of Technology}, Visiting Scholar, Atlanta, GA & {\color{subtle}\small 2019–2020}\\
+\end{tabularx}
+
+% ================= HONORS & AWARDS =================
+\section{Honors \& Awards}
+\begin{itemize}
+  \item \textbf{IEEE Senior Member} (2026) \textnormal{·} \textbf{CCF Senior Member}
+  \item \textbf{Best Research Paper Candidate}, IEEE ISSRE 2025: \emph{Too Many Cooks: Assessing the Need for Multi-Source Data in Microservice Failure Diagnosis}
+  \item \textbf{Best Industry Paper Candidate}, IEEE ISSRE 2024: \emph{Early Bird: Ensuring Reliability of Cloud Systems Through Early Failure Prediction}
+  \item \textbf{Best Research Paper}, IEEE ISSRE 2018: \emph{Robust and Rapid Adaption for Concept Drift in Software System Anomaly Detection}
+  \item \textbf{Outstanding Graduate}, Dept.\ of Computer Science and Technology, Tsinghua University (2021)
+\end{itemize}
+
+% ================= SELECTED PUBLICATIONS =================
+\section{Selected Publications}
+\vspace{-0.2ex}
+{\small Full list of 60+ papers at \href{https://minghua-ma.github.io/\#publications}{minghua-ma.github.io}. \; \textbf{M.\ Ma} highlights the author; * = corresponding author.}
+\vspace{0.4ex}
+\begin{itemize}[leftmargin=1.6em, label={}, itemsep=0.35ex]
+  \pub{\textbf{M.\ Ma}*, R.\ Wang, C.\ Bansal, S.\ Rajmohan, Y.\ Dang, H.\ Zhang. When Does AI Actually Help in Incident Response? Identifying Good First Messages in Cloud Service Incidents}{26}{ASE}
+  \pub{Y.\ Yao, Y.\ Jiang, \textbf{M.\ Ma}*, et al. An Agentic Framework for Triaging Incidents in Production Cloud Infrastructure}{26}{FSE}
+  \pub{C.\ Zhao, S.\ Zhang, et al., \textbf{M.\ Ma}*. Can Language Models Go Beyond Coding? Assessing the Capability of Language Models to Build Real-World Systems}{26}{TOSEM}
+  \pub{C.\ Zhao, \textbf{M.\ Ma}*, et al. EvidenT: An Evidence-Preserving Framework for Iterative System-Level Package Repair}{26}{ISSTA}
+  \pub{Z.\ Yu, A.\ Fang, \textbf{M.\ Ma}*, et al. Triangle: Empowering Incident Triage with Multi-Agent}{25}{ASE}
+  \pub{Y.\ Chen, M.\ Shetty, G.\ Somashekar, \textbf{M.\ Ma}*, et al. AIOpsLab: A Holistic Framework for Evaluating AI Agents for Enabling Autonomous Cloud}{25}{MLSys}
+  \pub{J.\ Liu, C.\ Zhang, J.\ Qian, \textbf{M.\ Ma}, et al. Large Language Models can Deliver Accurate and Interpretable Time Series Anomaly Detection}{25}{KDD}
+  \pub{M.\ Shetty, Y.\ Chen, G.\ Somashekar, \textbf{M.\ Ma}, et al. Building AI Agents for Autonomous Clouds: Challenges and Design Principles}{24}{SoCC}
+  \pub{Y.\ Chen, H.\ Xie, \textbf{M.\ Ma}*, et al. Automatic Root Cause Analysis via Large Language Models for Cloud Incidents}{24}{EuroSys}
+  \pub{Y.\ Jiang, C.\ Zhang, S.\ He, Z.\ Yang, \textbf{M.\ Ma}, et al. Xpert: Empowering Incident Management with Query Recommendations via LLMs}{24}{ICSE}
+  \pub{Y.\ Chen, C.\ Zhang, \textbf{M.\ Ma}, et al. ImDiffusion: Imputed Diffusion Models for Multivariate Time Series Anomaly Detection}{24}{VLDB}
+  \pub{P.\ Jin, S.\ Zhang, \textbf{M.\ Ma}, et al. Assess and Summarize: Improve Outage Understanding with Large Language Models}{23}{FSE}
+  \pub{C.\ Zhao, \textbf{M.\ Ma}, et al. Robust Multimodal Failure Detection for Microservice Systems}{23}{KDD}
+  \pub{S.\ Zhang, S.\ Xia, et al., \textbf{M.\ Ma}. Failure Diagnosis in Microservice Systems: A Comprehensive Survey and Analysis}{25}{TOSEM}
+  \pub{H.\ Yan, Y.\ Chen, \textbf{M.\ Ma}*, et al. An Empirical Study of Production Incidents in Generative AI Cloud Services}{25}{ISSRE}
+  \pub{C.\ Zhang, R.\ Yao, S.\ Qin, et al., \textbf{M.\ Ma}. Deoxys: A Causal Inference Engine for Unhealthy Node Mitigation in Large-scale Cloud Infrastructure}{24}{SoCC}
+  \pub{Z.\ Yu, \textbf{M.\ Ma}*, et al. MonitorAssistant: Simplifying Cloud Service Monitoring via Large Language Models}{24}{FSE}
+  \pub{Z.\ Yu, C.\ Pei, X.\ Wang, \textbf{M.\ Ma}, et al. Pre-trained KPI Anomaly Detection Model Based on Disentangled Transformer}{24}{KDD}
+  \pub{Z.\ Wang, C.\ Pei, \textbf{M.\ Ma}, et al. Revisiting VAE for Unsupervised Time Series Anomaly Detection: A Frequency Perspective}{24}{TheWebConf}
+  \pub{C.\ Zhang, L.\ Li, S.\ He, et al., \textbf{M.\ Ma}, et al. UFO: A UI-Focused Agent for Windows OS Interaction}{25}{NAACL}
+  \pub{R.\ Ding, C.\ Zhang, L.\ Wang, Y.\ Xu, \textbf{M.\ Ma}, et al. Everything of Thoughts: Defying the Law of Penrose Triangle for Thought Generation}{24}{ACL}
+  \pub{R.\ Ding, C.\ Zhang, L.\ Wang, Y.\ Xu, \textbf{M.\ Ma}, et al. TraceDiag: Adaptive, Interpretable and Efficient Root Cause Analysis on Large-Scale Microservice Systems}{23}{FSE}
+  \pub{L.\ Li, X.\ Zhang, S.\ He, et al., \textbf{M.\ Ma}, et al. CONAN: Diagnosing Batch Failures for Cloud Systems}{23}{ICSE-SEIP}
+  \pub{\textbf{M.\ Ma}, Y.\ Liu, Y.\ Tong, et al. An Empirical Investigation of Missing Data Handling in Cloud Node Failure Prediction}{22}{FSE}
+\end{itemize}
+
+% ================= PROFESSIONAL SERVICE =================
+\section{Professional Service}
+\begin{description}
+  \item[Organizer / Chair]\hfill\\ Build-Bench Challenge, ICSE 2027 (Organizer); SANER 2027 (Tool Demo Track Chair); EASE 2026 (Industry Track Chair); 4th CCF AIOps Challenge (Technical Chair).
+  \item[Program Committee]\hfill\\ FSE (2025–2027), ASE 2025, ISSRE (2024–2026), KDD (2023–2025), TheWebConf (2024, 2026), COLM (2025–2026), ACL 2026, APSEC 2024, MILETS, AIOps Workshop.
+  \item[Journal Reviewer]\hfill\\ ACM TIST, ACM TOSEM, IEEE TKDE, IEEE TSC, IEEE TCC, Journal of Systems \& Software, Neurocomputing.
+  \item[Mentor] IEEE TCSE Mentoring Program.
+\end{description}
+
+% ================= SELECTED TALKS =================
+\section{Selected Talks}
+\begin{itemize}
+  \item \textbf{Keynote}, 7th Intl.\ Workshop on Automated Program Repair (co-located with ASE 2026), Munich, Germany, Oct.\ 2026.
+  \item \textbf{Invited Talk}, ``Improving Cloud Reliability at Scale using Generative AI,'' University of Michigan, 2025.
+  \item \textbf{Tutorial}, ``AIOpsLab: Enabling Autonomous Cloud Operations with AI Agents,'' FSE 2025.
+  \item \textbf{Keynote}, ``LLM-based Root Cause Analysis for Cloud Incidents,'' CCF AIOps Challenge, Beijing, 2023.
+\end{itemize}
+
+% ================= TEACHING =================
+\section{Teaching}
+\begin{tabularx}{\linewidth}{@{}l@{\hspace{1em}}X r@{}}
+  \textbf{Mentor} & EC-528 Cloud Computing, Boston University & {\color{subtle}\small Spring 2026, Fall 2026}\\[0.3ex]
+  \textbf{Teaching Assistant} & Software Engineering; Advanced Network Management, Tsinghua University & {\color{subtle}\small 2017}\\
+\end{tabularx}
+
+\end{document}
