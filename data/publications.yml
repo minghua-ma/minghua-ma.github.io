@@ -30,6 +30,7 @@
   authors: Bhala Ranganathan, Minghua Ma
   category: conference
   venue: ISSRE'26
+  award: IEEE ISSRE 2026 Industry Track Distinguished Paper
   bibtex: |-
     @inproceedings{ranganathan2026bridging,
       title={Bridging the Mitigation Gap: A Taxonomy-Driven Empirical Study of Incident Recovery in Production LLM Serving},
