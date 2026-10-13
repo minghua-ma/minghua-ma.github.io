@@ -7,7 +7,7 @@ Pure HTML/CSS/JS — no build step required. Deployed via GitHub Pages.
 ## Structure
 
 ```
-index.html             # Single-page site (About, News, Experience, Awards, Teaching, Services, Publications)
+index.html             # Single-page site (About, Research Highlights, News, Experience, Awards, Teaching, Services, Publications)
 data/publications.yml  # All publications data (YAML, loaded client-side via js-yaml)
 assets/css/main.css    # Stylesheet
 assets/js/main.min.js  # Nav, greedy-nav, theme toggle
@@ -15,6 +15,16 @@ assets/js/theme.js     # Dark/light mode persistence
 assets/webfonts/       # Font Awesome icons
 images/                # Photos, favicon
 ```
+
+## Updating Profile and Impact
+
+The biography, project highlights, news, and service roles are
+maintained in `index.html`. Keep the search, Open Graph, and Twitter descriptions
+aligned with the biography. Avoid fixed publication and citation totals in the
+biography; the publication list and linked Google Scholar profile provide those
+details. Date repository snapshots, and record milestones in News rather than
+maintaining live counts. Keep future appointments and competitions explicitly
+marked as forthcoming.
 
 ## Adding a Publication
 
@@ -53,5 +63,3 @@ Fields (`*` = required):
 | `homepage` | URL to project homepage |
 | `bibtex` | BibTeX citation (multiline with `\|-`) |
 | `award` | Award text, shown highlighted |
-
-

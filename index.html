@@ -3,21 +3,21 @@
 <head>
   <meta charset="utf-8">
   <title>Dr. Minghua Ma – Senior Researcher, Microsoft M365 Research</title>
-  <meta name="description" content="Minghua Ma is a Senior Researcher at Microsoft M365 Research, working on AIOps—AI systems that autonomously detect, diagnose, and resolve failures in large-scale cloud infrastructure.">
+  <meta name="description" content="Minghua Ma leads AIOps research at Microsoft M365 Research, working with engineering teams to bring AI-assisted diagnosis and recovery into production and sharing open-source tools for research and education.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="canonical" href="https://minghua-ma.github.io/">
   <meta property="og:locale" content="en-US">
   <meta property="og:site_name" content="Dr. Minghua Ma">
   <meta property="og:type" content="profile">
   <meta property="og:title" content="Dr. Minghua Ma – Senior Researcher, Microsoft M365 Research">
-  <meta property="og:description" content="Minghua Ma is a Senior Researcher at Microsoft M365 Research, working on AIOps—AI systems that autonomously detect, diagnose, and resolve failures in large-scale cloud infrastructure.">
+  <meta property="og:description" content="Minghua Ma leads AIOps research at Microsoft M365 Research, working with engineering teams to bring AI-assisted diagnosis and recovery into production and sharing open-source tools for research and education.">
   <meta property="og:url" content="https://minghua-ma.github.io/">
   <meta property="og:image" content="https://minghua-ma.github.io/images/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Dr. Minghua Ma – Senior Researcher, Microsoft M365 Research">
-  <meta name="twitter:description" content="Minghua Ma is a Senior Researcher at Microsoft M365 Research, working on AIOps—AI systems that autonomously detect, diagnose, and resolve failures in large-scale cloud infrastructure.">
+  <meta name="twitter:description" content="Minghua Ma leads AIOps research at Microsoft M365 Research, working with engineering teams to bring AI-assisted diagnosis and recovery into production and sharing open-source tools for research and education.">
   <meta name="twitter:image" content="https://minghua-ma.github.io/images/og-image.png">
   <script>document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';</script>
   <link rel="stylesheet" href="/assets/css/main.css">
@@ -117,15 +117,21 @@
 
         <p>
           <strong>Minghua Ma</strong> is a Senior Researcher at Microsoft
-          <a href="https://www.microsoft.com/en-us/research/group/m365-research/">M365 Research</a>.
-          His work focuses on AIOps: building AI systems that autonomously detect, diagnose, and resolve
-          failures in large-scale cloud infrastructure, improving the reliability of services used by millions.
+          <a href="https://www.microsoft.com/en-us/research/group/m365-research/">M365 Research</a>,
+          where he <strong>leads the AIOps research direction</strong> and works with engineering teams
+          to bring research systems into production. He has worked in AIOps for <strong>more than ten years</strong>,
+          beginning with his doctoral research on software reliability.
           He received his Ph.D. from Tsinghua University in 2021, advised by
           <a href="https://netman.aiops.org/~peidan/">Prof. Dan Pei</a>
           in the <a href="https://netman.aiops.org/">Netman</a> Group.
-          His research has been published at top venues including ICSE, FSE, ASE, KDD, VLDB, and MLSys,
-          and deployed in production at Microsoft.
           He is an IEEE Senior Member and CCF Senior Member.
+        </p>
+
+        <p>
+          His research follows operational failures from incident assignment through diagnosis and recovery:
+          bringing distributed expertise into an investigation, preserving evidence across attempts,
+          and checking whether an intervention works. It includes systems used in Azure production
+          and open-source tools that researchers and students can use to study these problems.
         </p>
 
         <p class="intern-callout">
@@ -142,28 +148,30 @@
             <div class="project-icon">&#x1F6E1;&#xFE0F;</div>
             <div class="project-content">
               <h4>Agentic Reliability</h4>
-              <p>Building AI agents that safely close the loop in production operations through reliable intervention, evidence-grounded decisions, failure recovery, and effective human-agent collaboration (<a href="https://arxiv.org/abs/2605.08717">ASE'26</a>, <a href="https://dl.acm.org/doi/10.1145/3803437.3805239">FSE'26</a>).</p>
+              <p>Studying how AIOps agents use operational evidence, recover from failed attempts, and assist engineers during an investigation. The work connects diagnosis and intervention with execution-based checks and observable human-agent collaboration (<a href="https://arxiv.org/abs/2605.08717">ASE'26</a>, <a href="https://dl.acm.org/doi/10.1145/3803437.3805239">FSE'26</a>).</p>
             </div>
           </div>
           <div class="project-card">
             <div class="project-icon">&#x1F680;</div>
             <div class="project-content">
               <h4><a href="https://buildbench-hub.github.io/buildbench.github.io/">SysCraft</a></h4>
-              <p>AI agents that go beyond coding to build and repair real-world software systems. Benchmarked LLM system-building capabilities (<a href="https://dl.acm.org/doi/10.1145/3816153">TOSEM'26</a>) and developed an evidence-preserving framework for automated package repair (<a href="https://arxiv.org/abs/2605.08621">ISSTA'26</a>).</p>
+              <p>System-level repair of dependencies, build configuration, and toolchain assumptions. Build-bench evaluates cross-architecture repair on <strong>268 real-world failed packages</strong> (<a href="https://dl.acm.org/doi/10.1145/3816153">TOSEM'26</a>); EvidenT preserves evidence across repair attempts (<a href="https://arxiv.org/abs/2605.08621">ISSTA'26</a>). The work forms the basis of the forthcoming <a href="https://matrix.cstcloud.cn/build-bench/">Build-Bench Challenge at ICSE 2027</a>.</p>
             </div>
           </div>
           <div class="project-card">
             <div class="project-icon">&#x1F53A;</div>
             <div class="project-content">
               <h4><a href="https://azure.microsoft.com/en-us/blog/optimizing-incident-management-with-aiops-using-the-triangle-system/">Triangle</a></h4>
-              <p>AI-powered incident triage system: from LLM-based interpretable triage (<a href="https://doi.org/10.1109/issre62328.2024.00056">ISSRE'24</a> &amp; <a href="https://dl.acm.org/doi/10.1145/3786583.3786887">ICSE-SEIP'26</a>) to the multi-agent Triangle system (<a href="https://doi.org/10.1109/ase63991.2025.00062">ASE'25</a> &amp; <a href="https://dl.acm.org/doi/10.1145/3803437.3805228">FSE'26</a>), alongside a <a href="https://arxiv.org/abs/2511.08607">survey</a> of triage in SE practice. Highlighted by Azure CTO Mark Russinovich in the Advancing Reliability blog.</p>
+              <p>AI-assisted incident triage that brings team-specific knowledge into ownership decisions (<a href="https://doi.org/10.1109/ase63991.2025.00062">ASE'25</a>, <a href="https://dl.acm.org/doi/10.1145/3803437.3805228">FSE'26</a>). Its local triage system has operated in Azure production since mid-2024; <strong>more than 30 major Azure services have used Triangle</strong> as of October 2026. Highlighted by Azure CTO Mark Russinovich in the Advancing Reliability blog.</p>
+              <p>Related work: interpretable triage (<a href="https://doi.org/10.1109/issre62328.2024.00056">ISSRE'24</a>, <a href="https://dl.acm.org/doi/10.1145/3786583.3786887">ICSE-SEIP'26</a>) and a <a href="https://arxiv.org/abs/2511.08607">survey of triage in software engineering</a>.</p>
             </div>
           </div>
           <div class="project-card">
             <div class="project-icon">&#x1F52C;</div>
             <div class="project-content">
               <h4><a href="https://microsoft.github.io/AIOpsLab/">AIOpsLab</a></h4>
-              <p>Holistic open-source framework for evaluating AI agents for autonomous cloud operations. From design principles (<a href="https://dl.acm.org/doi/10.1145/3698038.3698525">SoCC'24</a>) to the evaluation framework (<a href="https://www.microsoft.com/en-us/research/publication/aiopslab-a-holistic-framework-for-evaluating-ai-agents-for-enabling-autonomous-cloud/">MLSys'25</a>), and a tutorial (<a href="https://dl.acm.org/doi/10.1145/3696630.3728619">FSE'25</a>).</p>
+              <p>Open-source infrastructure for evaluating AIOps agents with running microservices, fault injection, workloads, and telemetry. Used for course projects at UIUC and in a course at IISc Bangalore. The <a href="https://github.com/microsoft/AIOpsLab">repository</a> had <strong>1,006 stars and 178 forks</strong> as of October 13, 2026.</p>
+              <p>Design principles (<a href="https://dl.acm.org/doi/10.1145/3698038.3698525">SoCC'24</a>), evaluation framework (<a href="https://www.microsoft.com/en-us/research/publication/aiopslab-a-holistic-framework-for-evaluating-ai-agents-for-enabling-autonomous-cloud/">MLSys'25</a>), and tutorial (<a href="https://dl.acm.org/doi/10.1145/3696630.3728619">FSE'25</a>).</p>
             </div>
           </div>
         </div>
@@ -171,6 +179,13 @@
         <h2 id="news">News</h2>
 
         <div class="news-cards" id="news-cards">
+          <div class="news-card">
+            <div class="news-year">2026</div>
+            <div class="news-body">
+              <span class="news-tag tag-impact">Milestone</span>
+              <a href="https://github.com/microsoft/UFO">UFO</a>, which I contribute to, has reached <strong>10,000 GitHub stars</strong>! Thank you to the community for your support.
+            </div>
+          </div>
           <div class="news-card">
             <div class="news-year">2026</div>
             <div class="news-body">
@@ -182,7 +197,7 @@
             <div class="news-year">2026</div>
             <div class="news-body">
               <span class="news-tag tag-impact">Keynote</span>
-              I will deliver a <strong>keynote</strong> at the 7th International Workshop on Automated Program Repair, co-located with <strong>ASE 2026</strong>, in Munich, Germany, in October 2026.
+              My invited <strong>keynote</strong> at the 7th International Workshop on Automated Program Repair, co-located with <strong>ASE 2026</strong> in Munich, is titled <a href="https://conf.researchr.org/details/ase-2026/apr-2026-papers/11/What-Are-We-Really-Repairing-Lessons-from-Cloud-Failures">"What Are We Really Repairing? Lessons from Cloud Failures."</a>
             </div>
           </div>
           <div class="news-card">
@@ -316,9 +331,9 @@
         <ul>
           <li><strong>Organizer</strong>
             <ul>
-              <li><a href="https://matrix.cstcloud.cn/build-bench/">Build-Bench Challenge | ICSE 2027</a>: <strong>Organizer</strong></li>
-              <li><a href="https://conf.researchr.org/home/saner-2027">SANER 2027</a>: <strong>Tool Demo Track Chair</strong></li>
-              <li><a href="https://conf.researchr.org/home/ease-2026">EASE 2026</a>: <strong>Industry Track Chair</strong></li>
+              <li><a href="https://matrix.cstcloud.cn/build-bench/">Build-Bench Challenge | ICSE 2027</a>: <strong>Co-organizer</strong> (forthcoming)</li>
+              <li><a href="https://conf.researchr.org/home/saner-2027">SANER 2027</a>: <strong>Tool Demo Track Co-Chair</strong> (forthcoming)</li>
+              <li><a href="https://conf.researchr.org/home/ease-2026">EASE 2026</a>: <strong>Industry Track Co-Chair</strong></li>
               <li><a href="https://competition.aiops.cn/">The 4th CCF AIOps Challenge</a>: <strong>Technical Chair</strong></li>
             </ul>
           </li>
@@ -349,7 +364,7 @@
           </li>
           <li id="talks"><strong>Talks</strong>
             <ul>
-              <li>Keynote, 7th International Workshop on Automated Program Repair, co-located with ASE 2026, Munich, Germany, October 2026.</li>
+              <li>"<a href="https://conf.researchr.org/details/ase-2026/apr-2026-papers/11/What-Are-We-Really-Repairing-Lessons-from-Cloud-Failures">What Are We Really Repairing? Lessons from Cloud Failures</a>" (Invited Keynote), 7th International Workshop on Automated Program Repair, co-located with ASE 2026, Munich, Germany, October 2026.</li>
               <li>"Improving Cloud Reliability at Scale using Generative AI" (Invited Talk), University of Michigan, Online, 2025.</li>
               <li>"<a href="https://dl.acm.org/doi/10.1145/3696630.3728619">AIOpsLab: Enabling Autonomous Cloud Operations with AI Agents</a>" (Tutorial), FSE, Online, 2025.</li>
               <li>"LLM-based Root Cause Analysis for Cloud Incidents" (Keynote), CCF AIOps Challenge, Beijing, 2023.</li>
@@ -575,7 +590,7 @@ function switchView(view) {
 }
 
 /* ---- Load and render ---- */
-fetch('/data/publications.yml')
+fetch('/data/publications.yml?v=20260916-distinguished-paper')
   .then(function(r) { return r.text(); })
   .then(function(text) {
     var pubs = jsyaml.load(text);
