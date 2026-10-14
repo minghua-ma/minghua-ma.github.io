@@ -3,27 +3,41 @@
 <head>
   <meta charset="utf-8">
   <title>Dr. Minghua Ma – Senior Researcher, Microsoft M365 Research</title>
-  <meta name="description" content="Minghua Ma leads AIOps research at Microsoft M365 Research, working with engineering teams to bring AI-assisted diagnosis and recovery into production and sharing open-source tools for research and education.">
+  <meta name="description" content="Dr. Minghua Ma leads AIOps research at Microsoft M365 Research, advancing AI for software maintenance and reliability through deployed and open-source systems.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="canonical" href="https://minghua-ma.github.io/">
   <meta property="og:locale" content="en-US">
   <meta property="og:site_name" content="Dr. Minghua Ma">
   <meta property="og:type" content="profile">
   <meta property="og:title" content="Dr. Minghua Ma – Senior Researcher, Microsoft M365 Research">
-  <meta property="og:description" content="Minghua Ma leads AIOps research at Microsoft M365 Research, working with engineering teams to bring AI-assisted diagnosis and recovery into production and sharing open-source tools for research and education.">
+  <meta property="og:description" content="Dr. Minghua Ma leads AIOps research at Microsoft M365 Research, advancing AI for software maintenance and reliability through deployed and open-source systems.">
   <meta property="og:url" content="https://minghua-ma.github.io/">
   <meta property="og:image" content="https://minghua-ma.github.io/images/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Dr. Minghua Ma – Senior Researcher, Microsoft M365 Research">
-  <meta name="twitter:description" content="Minghua Ma leads AIOps research at Microsoft M365 Research, working with engineering teams to bring AI-assisted diagnosis and recovery into production and sharing open-source tools for research and education.">
+  <meta name="twitter:description" content="Dr. Minghua Ma leads AIOps research at Microsoft M365 Research, advancing AI for software maintenance and reliability through deployed and open-source systems.">
   <meta name="twitter:image" content="https://minghua-ma.github.io/images/og-image.png">
   <script>document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';</script>
   <link rel="stylesheet" href="/assets/css/main.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1.9.4/css/academicons.min.css">
   <link rel="icon" href="/images/favicon.svg">
   <link rel="apple-touch-icon" href="/images/favicon.svg">
+  <style>
+    .page__content h1 { margin: 0 0 0.75em; font-size: 1.7rem; line-height: 1.2; }
+    .page__content [id] { scroll-margin-top: 6rem; }
+    .featured-projects { grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); }
+    .project-card { border-radius: 8px; }
+    .project-content { min-width: 0; overflow-wrap: anywhere; }
+    .project-content h3 { margin: 0 0 0.4em !important; font-size: 1.05em; line-height: 1.35; }
+    .project-content h3 a { color: var(--global-text-color); text-decoration: none; }
+    .project-content h3 a:hover { color: var(--global-base-color); }
+    .project-content p + p { margin-top: 0.65em !important; }
+    .pub-view-toggle { flex-wrap: wrap; }
+    .bib-link, .bib-group-btn { border: 0; padding: 0.15em 0.3em; background: none; color: var(--global-link-color); font: inherit; cursor: pointer; }
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--global-base-color); outline-offset: 3px; }
+  </style>
 </head>
 <body>
 
@@ -31,13 +45,19 @@
 <div class="masthead">
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
-      <nav id="site-nav" class="greedy-nav">
-        <button><span class="navicon"></span></button>
+      <nav id="site-nav" class="greedy-nav" aria-label="Main navigation">
+        <button type="button" aria-label="Open navigation menu" aria-controls="navigation-overflow" aria-expanded="false"><span class="navicon" aria-hidden="true"></span></button>
         <ul class="visible-links">
           <li class="masthead__menu-item masthead__menu-item--lg persist selected">
             <a href="/">Dr. Minghua Ma</a>
           </li>
           <li class="masthead__menu-item nav-spacer" style="margin-left:2em;">
+            <a href="#research-highlights">Research</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a href="#publications">Publications</a>
+          </li>
+          <li class="masthead__menu-item">
             <a href="#news">News</a>
           </li>
           <li class="masthead__menu-item">
@@ -52,16 +72,13 @@
           <li class="masthead__menu-item">
             <a href="#services">Services</a>
           </li>
-          <li class="masthead__menu-item">
-            <a href="#publications">Publications</a>
-          </li>
           <li id="theme-toggle" class="masthead__menu-item persist tail">
-            <a role="button" aria-labelledby="theme-icon">
-              <i id="theme-icon" class="fa-solid fa-sun" aria-hidden="true" title="toggle theme"></i>
+            <a role="button" tabindex="0" aria-label="Toggle color theme" title="Toggle color theme">
+              <i id="theme-icon" class="fa-solid fa-sun" aria-hidden="true"></i>
             </a>
           </li>
         </ul>
-        <ul class="hidden-links hidden"></ul>
+        <ul class="hidden-links hidden" id="navigation-overflow"></ul>
       </nav>
     </div>
   </div>
@@ -76,7 +93,7 @@
         <img src="/images/bio-photo.jpg" class="author__avatar" alt="Minghua Ma">
       </div>
       <div class="author__content">
-        <h3 class="author__name">Minghua Ma</h3>
+        <h3 class="author__name">Dr. Minghua Ma</h3>
         <p class="author__bio">Senior Researcher</p>
       </div>
       <div class="author__urls-wrapper">
@@ -115,23 +132,25 @@
       <header></header>
       <section class="page__content" itemprop="text">
 
+        <h1>Dr. Minghua Ma</h1>
+
         <p>
-          <strong>Minghua Ma</strong> is a Senior Researcher at Microsoft
+          Dr. Ma is a Senior Researcher at Microsoft
           <a href="https://www.microsoft.com/en-us/research/group/m365-research/">M365 Research</a>,
-          where he <strong>leads the AIOps research direction</strong> and works with engineering teams
-          to bring research systems into production. He has worked in AIOps for <strong>more than ten years</strong>,
-          beginning with his doctoral research on software reliability.
-          He received his Ph.D. from Tsinghua University in 2021, advised by
-          <a href="https://netman.aiops.org/~peidan/">Prof. Dan Pei</a>
-          in the <a href="https://netman.aiops.org/">Netman</a> Group.
-          He is an IEEE Senior Member and CCF Senior Member.
+          where he <strong>leads the AIOps research direction</strong>. His research focuses on
+          <strong>AI for software maintenance and reliability</strong>: helping engineers diagnose
+          failures, repair software systems, and keep cloud services reliable after deployment.
+          He leads the <a href="#triangle">Triangle project</a> and works directly with engineering
+          teams to bring research systems into production.
         </p>
 
         <p>
-          His research follows operational failures from incident assignment through diagnosis and recovery:
-          bringing distributed expertise into an investigation, preserving evidence across attempts,
-          and checking whether an intervention works. It includes systems used in Azure production
-          and open-source tools that researchers and students can use to study these problems.
+          Dr. Ma has worked in AIOps for <strong>more than ten years</strong>, beginning with his
+          doctoral research on software reliability. He received his Ph.D. from Tsinghua University
+          in 2021, advised by
+          <a href="https://netman.aiops.org/~peidan/">Prof. Dan Pei</a>
+          in the <a href="https://netman.aiops.org/">Netman</a> Group.
+          He is an IEEE Senior Member and CCF Senior Member.
         </p>
 
         <p class="intern-callout">
@@ -145,33 +164,41 @@
 
         <div class="featured-projects">
           <div class="project-card">
-            <div class="project-icon">&#x1F6E1;&#xFE0F;</div>
+            <div class="project-icon"><i class="fas fa-code" aria-hidden="true"></i></div>
             <div class="project-content">
-              <h4>Agentic Reliability</h4>
-              <p>Studying how AIOps agents use operational evidence, recover from failed attempts, and assist engineers during an investigation. The work connects diagnosis and intervention with execution-based checks and observable human-agent collaboration (<a href="https://arxiv.org/abs/2605.08717">ASE'26</a>, <a href="https://dl.acm.org/doi/10.1145/3803437.3805239">FSE'26</a>).</p>
+              <h3>AI-Assisted Debugging and Incident Response</h3>
+              <p>Helping engineers investigate software failures and helping AI agents recover when a debugging or repair attempt fails. This research includes agent recovery (<a href="https://arxiv.org/abs/2605.08717">ASE'26</a>), troubleshooting-guide generation (<a href="https://dl.acm.org/doi/10.1145/3803437.3805239">FSE'26</a>), and studies of how AI assistance affects engineers' investigation decisions.</p>
             </div>
           </div>
           <div class="project-card">
-            <div class="project-icon">&#x1F680;</div>
+            <div class="project-icon"><i class="fas fa-wrench" aria-hidden="true"></i></div>
             <div class="project-content">
-              <h4><a href="https://buildbench-hub.github.io/buildbench.github.io/">SysCraft</a></h4>
-              <p>System-level repair of dependencies, build configuration, and toolchain assumptions. Build-bench evaluates cross-architecture repair on <strong>268 real-world failed packages</strong> (<a href="https://dl.acm.org/doi/10.1145/3816153">TOSEM'26</a>); EvidenT preserves evidence across repair attempts (<a href="https://arxiv.org/abs/2605.08621">ISSTA'26</a>). The work forms the basis of the forthcoming <a href="https://matrix.cstcloud.cn/build-bench/">Build-Bench Challenge at ICSE 2027</a>.</p>
+              <h3><a href="https://buildbench-hub.github.io/buildbench.github.io/">SysCraft: Software Repair Beyond Code</a></h3>
+              <p>Making software build and run requires repairing dependencies, build settings, and compiler assumptions as well as source code. Build-bench evaluates cross-architecture repair on <strong>268 real-world failed packages</strong> (<a href="https://dl.acm.org/doi/10.1145/3816153">TOSEM'26</a>); EvidenT helps repair agents retain evidence across attempts (<a href="https://arxiv.org/abs/2605.08621">ISSTA'26</a>). Dr. Ma co-organizes the <a href="https://matrix.cstcloud.cn/build-bench/">ICSE 2027 Build-Bench Challenge</a> based on this work.</p>
             </div>
           </div>
-          <div class="project-card">
-            <div class="project-icon">&#x1F53A;</div>
+          <div class="project-card" id="triangle">
+            <div class="project-icon"><i class="fas fa-project-diagram" aria-hidden="true"></i></div>
             <div class="project-content">
-              <h4><a href="https://azure.microsoft.com/en-us/blog/optimizing-incident-management-with-aiops-using-the-triangle-system/">Triangle</a></h4>
-              <p>AI-assisted incident triage that brings team-specific knowledge into ownership decisions (<a href="https://doi.org/10.1109/ase63991.2025.00062">ASE'25</a>, <a href="https://dl.acm.org/doi/10.1145/3803437.3805228">FSE'26</a>). Its local triage system has operated in Azure production since mid-2024; <strong>more than 30 major Azure services have used Triangle</strong> as of October 2026. Highlighted by Azure CTO Mark Russinovich in the Advancing Reliability blog.</p>
+              <h3><a href="https://azure.microsoft.com/en-us/blog/optimizing-incident-management-with-aiops-using-the-triangle-system/">Triangle</a></h3>
+              <p><strong>Project lead.</strong> AI-assisted incident triage for Azure (<a href="https://doi.org/10.1109/ase63991.2025.00062">ASE'25</a>, <a href="https://dl.acm.org/doi/10.1145/3803437.3805228">FSE'26</a>). Its local triage system has operated in production since mid-2024, with <strong>more than 30 major Azure services</strong> using Triangle as of October 2026. Highlighted by Azure CTO Mark Russinovich in the Advancing Reliability blog.</p>
               <p>Related work: interpretable triage (<a href="https://doi.org/10.1109/issre62328.2024.00056">ISSRE'24</a>, <a href="https://dl.acm.org/doi/10.1145/3786583.3786887">ICSE-SEIP'26</a>) and a <a href="https://arxiv.org/abs/2511.08607">survey of triage in software engineering</a>.</p>
             </div>
           </div>
           <div class="project-card">
-            <div class="project-icon">&#x1F52C;</div>
+            <div class="project-icon"><i class="fas fa-flask" aria-hidden="true"></i></div>
             <div class="project-content">
-              <h4><a href="https://microsoft.github.io/AIOpsLab/">AIOpsLab</a></h4>
-              <p>Open-source infrastructure for evaluating AIOps agents with running microservices, fault injection, workloads, and telemetry. Used for course projects at UIUC and in a course at IISc Bangalore. The <a href="https://github.com/microsoft/AIOpsLab">repository</a> had <strong>1,006 stars and 178 forks</strong> as of October 13, 2026.</p>
+              <h3><a href="https://microsoft.github.io/AIOpsLab/">AIOpsLab</a></h3>
+              <p>An open framework for testing AI agents on realistic cloud failures, with running microservices, fault injection, workloads, and telemetry. Used in courses at the University of Illinois Urbana-Champaign and the Indian Institute of Science, Bangalore. The <a href="https://github.com/microsoft/AIOpsLab">repository</a> had <strong>1,006 stars and 178 forks</strong> as of October 13, 2026.</p>
               <p>Design principles (<a href="https://dl.acm.org/doi/10.1145/3698038.3698525">SoCC'24</a>), evaluation framework (<a href="https://www.microsoft.com/en-us/research/publication/aiopslab-a-holistic-framework-for-evaluating-ai-agents-for-enabling-autonomous-cloud/">MLSys'25</a>), and tutorial (<a href="https://dl.acm.org/doi/10.1145/3696630.3728619">FSE'25</a>).</p>
+            </div>
+          </div>
+          <div class="project-card" id="ufo">
+            <div class="project-icon"><i class="fas fa-desktop" aria-hidden="true"></i></div>
+            <div class="project-content">
+              <h3><a href="https://github.com/microsoft/UFO">UFO: AI Agents for Windows Applications</a></h3>
+              <p><strong>Main contributor.</strong> An open-source agent that carries out user requests through Windows application interfaces. The <a href="https://github.com/microsoft/UFO">repository</a> had <strong>10,005 stars and 1,071 forks</strong> as of October 13, 2026.</p>
+              <p>Research paper (<a href="https://aclanthology.org/2025.naacl-long.26/">NAACL'25</a>) and <a href="https://microsoft.github.io/UFO/">project homepage</a>.</p>
             </div>
           </div>
         </div>
@@ -183,7 +210,7 @@
             <div class="news-year">2026</div>
             <div class="news-body">
               <span class="news-tag tag-impact">Milestone</span>
-              <a href="https://github.com/microsoft/UFO">UFO</a>, which I contribute to, has reached <strong>10,000 GitHub stars</strong>! Thank you to the community for your support.
+              <a href="https://github.com/microsoft/UFO">UFO</a>, to which I am a main contributor, has reached <strong>10,000 GitHub stars</strong>! Thank you to the community for your support.
             </div>
           </div>
           <div class="news-card">
@@ -204,7 +231,7 @@
             <div class="news-year">2026</div>
             <div class="news-body">
               <span class="news-tag tag-service">Service</span>
-              I will serve as an <strong>Organizer</strong> of <a href="https://matrix.cstcloud.cn/build-bench/">Build-Bench Challenge | ICSE 2027</a> in the inaugural ICSE 2027 Competition Track. <strong>Welcome to participate!</strong>
+              I co-organize the <a href="https://matrix.cstcloud.cn/build-bench/">ICSE 2027 Build-Bench Challenge</a> in the inaugural ICSE Competition Track. <strong>Welcome to participate!</strong>
             </div>
           </div>
           <div class="news-card">
@@ -258,7 +285,7 @@
             </div>
           </div>
         </div>
-        <button class="news-toggle" id="news-toggle" onclick="toggleNews()">Show more</button>
+        <button type="button" class="news-toggle" id="news-toggle" aria-controls="news-cards" aria-expanded="false" onclick="toggleNews()">Show more</button>
 
         <h2 id="experience">Experience</h2>
 
@@ -331,8 +358,8 @@
         <ul>
           <li><strong>Organizer</strong>
             <ul>
-              <li><a href="https://matrix.cstcloud.cn/build-bench/">Build-Bench Challenge | ICSE 2027</a>: <strong>Co-organizer</strong> (forthcoming)</li>
-              <li><a href="https://conf.researchr.org/home/saner-2027">SANER 2027</a>: <strong>Tool Demo Track Co-Chair</strong> (forthcoming)</li>
+              <li><a href="https://matrix.cstcloud.cn/build-bench/">ICSE 2027 Build-Bench Challenge</a>: <strong>Co-organizer</strong></li>
+              <li><a href="https://conf.researchr.org/home/saner-2027">SANER 2027</a>: <strong>Tool Demo Track Co-Chair</strong> (appointed)</li>
               <li><a href="https://conf.researchr.org/home/ease-2026">EASE 2026</a>: <strong>Industry Track Co-Chair</strong></li>
               <li><a href="https://competition.aiops.cn/">The 4th CCF AIOps Challenge</a>: <strong>Technical Chair</strong></li>
             </ul>
@@ -377,26 +404,26 @@
         <p class="pub-legend">
           <span>* corresponding author</span>
           <span><sup>+</sup> equal contribution</span>
-          <span>&#128221; paper</span>
+          <span><i class="fas fa-file-lines" aria-hidden="true"></i> paper</span>
           <span><i class="fab fa-github" aria-hidden="true"></i> code</span>
-          <span>&#127968; homepage</span>
-          <span>&#128206; BibTeX</span>
+          <span><i class="fas fa-house" aria-hidden="true"></i> homepage</span>
+          <span><i class="fas fa-clipboard" aria-hidden="true"></i> BibTeX</span>
         </p>
 
         <!-- BibTeX popup -->
-        <div id="notification" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%,-50%); z-index:1000; background:var(--global-bg-color,#fff); color:var(--global-text-color,#333); border:1px solid var(--global-border-color,#ccc); border-radius:8px; box-shadow:0 4px 20px rgba(0,0,0,0.25); padding:20px; max-width:700px; width:90%; max-height:70vh; overflow-y:auto;">
+        <div id="notification" role="dialog" aria-modal="true" aria-labelledby="bibtex-title" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%,-50%); z-index:1000; background:var(--global-bg-color,#fff); color:var(--global-text-color,#333); border:1px solid var(--global-border-color,#ccc); border-radius:8px; box-shadow:0 4px 20px rgba(0,0,0,0.25); padding:20px; max-width:700px; width:90%; max-height:70vh; overflow-y:auto;">
           <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
-            <strong id="bibtex-title" style="font-size:1.1em;">&#128206; BibTeX (copied to clipboard)</strong>
-            <button onclick="closePopup()" aria-label="Close" style="background:none; border:none; font-size:1.4em; cursor:pointer; color:#666;">&times;</button>
+            <strong id="bibtex-title" style="font-size:1.1em;">BibTeX</strong>
+            <button type="button" id="bibtex-close" onclick="closePopup()" aria-label="Close BibTeX" title="Close BibTeX" style="background:none; border:none; font-size:1.4em; cursor:pointer; color:var(--global-text-color);"><i class="fas fa-xmark" aria-hidden="true"></i></button>
           </div>
           <pre id="bibtex-content" style="background:var(--callout-bg,#f5f5f5); padding:12px; border-radius:4px; overflow-x:auto; white-space:pre-wrap; word-break:break-all; font-size:0.9em; margin:0;"></pre>
         </div>
         <div id="notification-overlay" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.3); z-index:999;" onclick="closePopup()"></div>
 
         <!-- View toggle -->
-        <div class="pub-view-toggle">
-          <button class="pub-view-btn" onclick="switchView('topic')">By Topic</button>
-          <button class="pub-view-btn active" onclick="switchView('venue')">By Venue Type</button>
+        <div class="pub-view-toggle" role="group" aria-label="Publication grouping">
+          <button type="button" class="pub-view-btn" data-view="topic" aria-controls="view-topic" aria-pressed="false" onclick="switchView('topic')">By Topic</button>
+          <button type="button" class="pub-view-btn active" data-view="venue" aria-controls="view-venue" aria-pressed="true" onclick="switchView('venue')">By Venue Type</button>
         </div>
 
         <div id="view-topic" style="display:none;"></div>
@@ -432,6 +459,35 @@
   });
 })();
 
+(function() {
+  var nav = document.getElementById('site-nav');
+  var menu = nav.querySelector('button');
+  var overflow = document.getElementById('navigation-overflow');
+  var theme = document.querySelector('#theme-toggle a');
+  function syncMenu() {
+    var expanded = !overflow.classList.contains('hidden');
+    menu.setAttribute('aria-expanded', String(expanded));
+    menu.setAttribute('aria-label', expanded ? 'Close navigation menu' : 'Open navigation menu');
+  }
+  new MutationObserver(syncMenu).observe(overflow, { attributes: true, attributeFilter: ['class'] });
+  syncMenu();
+  nav.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape' && !overflow.classList.contains('hidden')) {
+      menu.click();
+      menu.focus();
+    }
+  });
+  overflow.addEventListener('click', function(event) {
+    if (event.target.closest('a') && !overflow.classList.contains('hidden')) menu.click();
+  });
+  theme.addEventListener('keydown', function(event) {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      theme.click();
+    }
+  });
+})();
+
 /* ---- Active nav highlight on scroll ---- */
 (function() {
   var sections = document.querySelectorAll('h2[id]');
@@ -444,8 +500,10 @@
     });
     navLinks.forEach(function(a) {
       a.parentElement.classList.remove('nav-active');
+      a.removeAttribute('aria-current');
       if (a.getAttribute('href') === '#' + current) {
         a.parentElement.classList.add('nav-active');
+        a.setAttribute('aria-current', 'location');
       }
     });
   });
@@ -468,9 +526,11 @@ function toggleNews() {
   if (cards.classList.contains('collapsed')) {
     cards.classList.remove('collapsed');
     btn.textContent = 'Show less';
+    btn.setAttribute('aria-expanded', 'true');
   } else {
     cards.classList.add('collapsed');
     btn.textContent = 'Show more';
+    btn.setAttribute('aria-expanded', 'false');
   }
 }
 </script>
@@ -487,39 +547,85 @@ function slugify(str) {
 function closePopup() {
   document.getElementById('notification').style.display = 'none';
   document.getElementById('notification-overlay').style.display = 'none';
+  if (popupTrigger) popupTrigger.focus();
+  popupTrigger = null;
 }
 
 var bibtexData = {};
-var lastCopiedId = null;
+var popupTrigger = null;
+
+function showBibTeX(bibtex, title) {
+  popupTrigger = document.activeElement;
+  var popup = document.getElementById('notification');
+  var content = document.getElementById('bibtex-content');
+  var heading = document.getElementById('bibtex-title');
+  content.textContent = bibtex;
+  heading.textContent = title;
+  popup.style.display = 'block';
+  document.getElementById('notification-overlay').style.display = 'block';
+  document.getElementById('bibtex-close').focus();
+  function updateCopyStatus(status) {
+    if (popup.style.display === 'block' && content.textContent === bibtex) heading.textContent = title + status;
+  }
+  if (!navigator.clipboard) {
+    updateCopyStatus(' (clipboard unavailable)');
+    return;
+  }
+  return navigator.clipboard.writeText(bibtex)
+    .then(function() { updateCopyStatus(' (copied to clipboard)'); })
+    .catch(function() { updateCopyStatus(' (clipboard unavailable)'); });
+}
+
+document.addEventListener('keydown', function(event) {
+  if (document.getElementById('notification').style.display !== 'block') return;
+  if (event.key === 'Escape') {
+    event.preventDefault();
+    closePopup();
+  } else if (event.key === 'Tab') {
+    event.preventDefault();
+    document.getElementById('bibtex-close').focus();
+  }
+});
 
 function copyBibTeX(event, id) {
   event.preventDefault();
   var bib = bibtexData[id];
   if (!bib) { alert('BibTeX not found'); return; }
-  if (navigator.clipboard) navigator.clipboard.writeText(bib);
-  if (lastCopiedId) {
-    var el = document.getElementById(lastCopiedId);
-    if (el) el.textContent = '\u{1F4CE}';
-  }
-  var el = document.getElementById(id);
-  if (el) el.textContent = 'Copied!';
-  lastCopiedId = id;
-  document.getElementById('bibtex-content').textContent = bib;
-  document.getElementById('bibtex-title').innerHTML = '&#128206; BibTeX (copied to clipboard)';
-  document.getElementById('notification').style.display = 'block';
-  document.getElementById('notification-overlay').style.display = 'block';
-  setTimeout(closePopup, 1000);
+  return showBibTeX(bib, 'BibTeX');
 }
 
 function copyGroupBib(event, entries) {
   event.preventDefault();
-  var allBib = entries.join('\n\n');
-  if (navigator.clipboard) navigator.clipboard.writeText(allBib);
-  document.getElementById('bibtex-title').textContent = 'Copied ' + entries.length + ' BibTeX entries';
-  document.getElementById('bibtex-content').textContent = allBib;
-  document.getElementById('notification').style.display = 'block';
-  document.getElementById('notification-overlay').style.display = 'block';
-  setTimeout(closePopup, 2000);
+  return showBibTeX(entries.join('\n\n'), 'BibTeX: ' + entries.length + ' entries');
+}
+
+function publicationLink(url, iconClass, label) {
+  var link = document.createElement('a');
+  link.href = url;
+  link.target = '_blank';
+  link.rel = 'noopener noreferrer';
+  link.setAttribute('aria-label', label);
+  link.title = label;
+  var icon = document.createElement('i');
+  icon.className = iconClass;
+  icon.setAttribute('aria-hidden', 'true');
+  link.appendChild(icon);
+  return link.outerHTML;
+}
+
+function bibTeXButton(label, handler, id) {
+  var button = document.createElement('button');
+  button.type = 'button';
+  button.className = id ? 'bib-link' : 'bib-group-btn';
+  if (id) button.id = id;
+  button.setAttribute('aria-label', label);
+  button.title = label;
+  button.setAttribute('onclick', handler);
+  var icon = document.createElement('i');
+  icon.className = 'fas fa-clipboard';
+  icon.setAttribute('aria-hidden', 'true');
+  button.appendChild(icon);
+  return button.outerHTML;
 }
 
 /* ---- Render a list of publications ---- */
@@ -531,10 +637,10 @@ function renderPubList(pubs, idPrefix) {
     html += '<li>';
     if (pub.venue) html += '<span class="pub-venue">' + pub.venue + '</span> ';
     html += '<span class="pub-title">' + pub.title + '</span>';
-    if (pub.paper) html += ' <a href="' + pub.paper + '" target="_blank">&#128221;</a>';
-    if (pub.code) html += ' <a class="code-link" href="' + pub.code + '" target="_blank" style="color:inherit;"><i class="fab fa-github" aria-hidden="true"></i></a>';
-    if (pub.homepage) html += ' <a href="' + pub.homepage + '" target="_blank">&#127968;</a>';
-    if (pub.bibtex) html += ' <a class="bib-link" href="#" id="' + sid + '" onclick="copyBibTeX(event,\'' + slugify(pub.title) + '\')">&#128206;</a>';
+    if (pub.paper) html += ' ' + publicationLink(pub.paper, 'fas fa-file-lines', 'Paper: ' + pub.title);
+    if (pub.code) html += ' ' + publicationLink(pub.code, 'fab fa-github', 'Code: ' + pub.title);
+    if (pub.homepage) html += ' ' + publicationLink(pub.homepage, 'fas fa-house', 'Project homepage: ' + pub.title);
+    if (pub.bibtex) html += ' ' + bibTeXButton('BibTeX: ' + pub.title, "copyBibTeX(event,'" + slugify(pub.title) + "')", sid);
     var authors = pub.authors.replace(/Minghua Ma/g, '<strong>Minghua Ma</strong>');
     html += '<br><span class="pub-authors">' + authors + '</span>';
     if (pub.award) html += '<br><strong class="pub-award">&#127942; ' + pub.award + '</strong>';
@@ -572,7 +678,7 @@ function buildGroupView(pubs, field, groups, container) {
     var groupBib = filtered.filter(function(p){ return p.bibtex; }).map(function(p){ return p.bibtex; });
     html += '<h3>' + label;
     if (groupBib.length > 0) {
-      html += ' <a class="bib-group-btn" href="#" onclick="copyGroupBib(event, ' + JSON.stringify(groupBib).replace(/"/g, '&quot;') + ')">&#128206;</a>';
+      html += ' ' + bibTeXButton('BibTeX: ' + label, 'copyGroupBib(event, ' + JSON.stringify(groupBib) + ')');
     }
     html += '</h3>';
     html += renderPubList(filtered, g.key.substring(0,2) + '-');
@@ -585,13 +691,19 @@ function switchView(view) {
   document.getElementById('view-topic').style.display = view === 'topic' ? '' : 'none';
   document.getElementById('view-venue').style.display = view === 'venue' ? '' : 'none';
   var btns = document.querySelectorAll('.pub-view-btn');
-  btns.forEach(function(b) { b.classList.remove('active'); });
-  event.target.classList.add('active');
+  btns.forEach(function(button) {
+    var selected = button.dataset.view === view;
+    button.classList.toggle('active', selected);
+    button.setAttribute('aria-pressed', String(selected));
+  });
 }
 
 /* ---- Load and render ---- */
 fetch('/data/publications.yml?v=20260916-distinguished-paper')
-  .then(function(r) { return r.text(); })
+  .then(function(r) {
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    return r.text();
+  })
   .then(function(text) {
     var pubs = jsyaml.load(text);
     document.getElementById('loading-msg').style.display = 'none';

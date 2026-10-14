@@ -23,8 +23,8 @@ maintained in `index.html`. Keep the search, Open Graph, and Twitter description
 aligned with the biography. Avoid fixed publication and citation totals in the
 biography; the publication list and linked Google Scholar profile provide those
 details. Date repository snapshots, and record milestones in News rather than
-maintaining live counts. Keep future appointments and competitions explicitly
-marked as forthcoming.
+maintaining live counts. Record confirmed organizing roles and appointments with
+their event years without implying that future events have already taken place.
 
 ## Adding a Publication
 
