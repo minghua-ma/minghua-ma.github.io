@@ -13,6 +13,18 @@
 #   - bibtex:        BibTeX citation content, multiline (optional)
 #   - award:         Award text, shown in red (optional)
 # =============================================================================
+- title: 'Panacea: From Ambiguous Incidents to Safe Mitigation Policies at Azure Scale'
+  topic: Incident Management
+  authors: Ze Li, Chang Lou, Vivek Ramamurthy, Vignatha Yenugutala, Eion Blanchard, Minghua Ma, Hemant Malik, Shweta Patil, Murali Chintalapati
+  category: conference
+  venue: SoCC'26
+  bibtex: |-
+    @inproceedings{li2026panacea,
+      title={Panacea: From Ambiguous Incidents to Safe Mitigation Policies at Azure Scale},
+      author={Li, Ze and Lou, Chang and Ramamurthy, Vivek and Yenugutala, Vignatha and Blanchard, Eion and Ma, Minghua and Malik, Hemant and Patil, Shweta and Chintalapati, Murali},
+      booktitle={Proceedings of the ACM Symposium on Cloud Computing (SoCC)},
+      year={2026}
+    }
 - title: 'GUI-360°: A Comprehensive Dataset and Benchmark for Desktop Productivity Computer-Using Agents'
   topic: AI Agents
   authors: Jian Mu, Chaoyun Zhang, Chiming Ni, Lu Wang, Bo Qiao, Kartik Mathur, Qianhui Wu, Yuhang Xie, Xiaojun Ma, Mengyu Zhou, Si Qin, Liqun Li, Yu Kang, Minghua Ma, Qingwei Lin, Saravan Rajmohan, Dongmei Zhang
@@ -90,7 +102,7 @@
       year={2026}
     }
 - title: 'An Agentic Framework for Triaging Incidents in Production Cloud Infrastructure'
-  topic: incident management
+  topic: Incident Management
   authors: Yuhan Yao, Yuxuan Jiang, Minghua Ma*, Madhura Vaidya, Jieren Deng, Yigong Hu, Chetan Bansal, Ze Li, Murali Chintalapati
   category: conference
   venue: FSE'26
@@ -104,7 +116,7 @@
       year={2026}
     }
 - title: 'TSGen: Automated Troubleshooting Guide Generation'
-  topic: incident management
+  topic: Incident Management
   authors: Yi Xiao, Hongyu Zhang, Daniel Genkin, Chaoyun Zhang, Rujia Wang, Chetan Bansal, Bhala Ranganathan, Saravan Rajmohan, Minghua Ma*
   category: conference
   venue: FSE'26
@@ -118,7 +130,7 @@
       year={2026}
     }
 - title: 'Aloha: Localizing Batch Failures in Large-scale Cloud Systems via Contrast Analysis and Human-in-the-Loop Agent'
-  topic: incident management
+  topic: Incident Management
   authors: Shenglin Zhang, Yujia Wu, Jinghuan Ren, Yongqian Sun, Wenwei Gu, Chaoyun Zhang, Liqun Li, Qingwei Lin, Dongmei Zhang, Saravan Rajmohan, Chetan Bansal, Minghua Ma*
   category: conference
   venue: FSE'26

@@ -7,7 +7,7 @@ Pure HTML/CSS/JS — no build step required. Deployed via GitHub Pages.
 ## Structure
 
 ```
-index.html             # Single-page site (About, Research Highlights, News, Experience, Awards, Teaching, Services, Publications)
+index.html             # Single-page site (About, News, Research Highlights, Experience, Awards, Teaching, Services, Publications)
 data/publications.yml  # All publications data (YAML, loaded client-side via js-yaml)
 assets/css/main.css    # Stylesheet
 assets/js/main.min.js  # Nav, greedy-nav, theme toggle
@@ -25,6 +25,11 @@ biography; the publication list and linked Google Scholar profile provide those
 details. Date repository snapshots, and record milestones in News rather than
 maintaining live counts. Record confirmed organizing roles and appointments with
 their event years without implying that future events have already taken place.
+
+Research Highlights uses one full-width, text-only card per project in a
+single-column layout on all screen sizes. Describe research contributions there;
+keep repository milestones in News. Profile links remain visible on mobile,
+and the publication legend wraps to fit narrow screens.
 
 ## Adding a Publication
 
@@ -55,7 +60,7 @@ Fields (`*` = required):
 | `title`* | Paper title |
 | `authors`* | Author string; use `*` for corresponding author (e.g. `Minghua Ma*`). `Minghua Ma` is auto-bolded in rendering |
 | `category`* | `conference` \| `journal` \| `workshop` \| `preprint` |
-| `topic`* | Research topic, used for grouping (e.g. `incident management`, `AI Agents`, `Survey/Benchmark`, `anomaly detection`) |
+| `topic`* | Case-sensitive grouping key: `Survey/Benchmark`, `AI Agents`, `Incident Management`, `Cloud Reliability`, `Anomaly Detection`, or `Networking` |
 | `venue` | Short venue label, e.g. `FSE'26` |
 | `paper` | URL to paper PDF / preprint |
 | `code` | URL to code repository |

@@ -27,14 +27,27 @@
   <style>
     .page__content h1 { margin: 0 0 0.75em; font-size: 1.7rem; line-height: 1.2; }
     .page__content [id] { scroll-margin-top: 6rem; }
-    .featured-projects { grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); }
-    .project-card { border-radius: 8px; }
+    .author__urls-wrapper { display: block; cursor: default; }
+    .author__urls { display: flex; flex-wrap: wrap; gap: 0.25em 1em; position: static; margin: 0; padding: 0; border: 0; background: transparent; box-shadow: none; }
+    .author__urls::before, .author__urls::after { display: none; }
+    @media (min-width: 57.8125em) {
+      .author__urls { display: block; }
+    }
+    .featured-projects { grid-template-columns: minmax(0, 1fr); gap: 1.25em; }
+    .project-card { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1.25em; min-height: 0; padding: 1.5em; border-radius: 8px; }
+    .project-card:hover { transform: none; }
     .project-content { min-width: 0; overflow-wrap: anywhere; }
     .project-content h3 { margin: 0 0 0.4em !important; font-size: 1.05em; line-height: 1.35; }
     .project-content h3 a { color: var(--global-text-color); text-decoration: none; }
     .project-content h3 a:hover { color: var(--global-base-color); }
     .project-content p + p { margin-top: 0.65em !important; }
-    .pub-view-toggle { flex-wrap: wrap; }
+    @media (max-width: 600px) {
+      .project-card { padding: 1em; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .project-card { animation: none; transition: none; }
+    }
+    .pub-legend, .pub-view-toggle { flex-wrap: wrap; }
     .bib-link, .bib-group-btn { border: 0; padding: 0.15em 0.3em; background: none; color: var(--global-link-color); font: inherit; cursor: pointer; }
     a:focus-visible, button:focus-visible { outline: 2px solid var(--global-base-color); outline-offset: 3px; }
   </style>
@@ -52,13 +65,10 @@
             <a href="/">Dr. Minghua Ma</a>
           </li>
           <li class="masthead__menu-item nav-spacer" style="margin-left:2em;">
-            <a href="#research-highlights">Research</a>
-          </li>
-          <li class="masthead__menu-item">
-            <a href="#publications">Publications</a>
-          </li>
-          <li class="masthead__menu-item">
             <a href="#news">News</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a href="#research-highlights">Research</a>
           </li>
           <li class="masthead__menu-item">
             <a href="#experience">Experience</a>
@@ -71,6 +81,9 @@
           </li>
           <li class="masthead__menu-item">
             <a href="#services">Services</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a href="#publications">Publications</a>
           </li>
           <li id="theme-toggle" class="masthead__menu-item persist tail">
             <a role="button" tabindex="0" aria-label="Toggle color theme" title="Toggle color theme">
@@ -140,12 +153,7 @@
           where he <strong>leads the AIOps research direction</strong>. His research focuses on
           <strong>AI for software maintenance and reliability</strong>: helping engineers diagnose
           failures, repair software systems, and keep cloud services reliable after deployment.
-          He leads the <a href="#triangle">Triangle project</a> and works directly with engineering
-          teams to bring research systems into production.
-        </p>
-
-        <p>
-          Dr. Ma has worked in AIOps for <strong>more than ten years</strong>, beginning with his
+          He has worked in AIOps for <strong>more than ten years</strong>, beginning with his
           doctoral research on software reliability. He received his Ph.D. from Tsinghua University
           in 2021, advised by
           <a href="https://netman.aiops.org/~peidan/">Prof. Dan Pei</a>
@@ -159,49 +167,6 @@
           master's, and Ph.D. intern students. If you are interested in working with me, please
           <a href="mailto:minghuama@microsoft.com">email me</a> your CV.
         </p>
-
-        <h2 id="research-highlights">Research Highlights</h2>
-
-        <div class="featured-projects">
-          <div class="project-card">
-            <div class="project-icon"><i class="fas fa-code" aria-hidden="true"></i></div>
-            <div class="project-content">
-              <h3>AI-Assisted Debugging and Incident Response</h3>
-              <p>Helping engineers investigate software failures and helping AI agents recover when a debugging or repair attempt fails. This research includes agent recovery (<a href="https://arxiv.org/abs/2605.08717">ASE'26</a>), troubleshooting-guide generation (<a href="https://dl.acm.org/doi/10.1145/3803437.3805239">FSE'26</a>), and studies of how AI assistance affects engineers' investigation decisions.</p>
-            </div>
-          </div>
-          <div class="project-card">
-            <div class="project-icon"><i class="fas fa-wrench" aria-hidden="true"></i></div>
-            <div class="project-content">
-              <h3><a href="https://buildbench-hub.github.io/buildbench.github.io/">SysCraft: Software Repair Beyond Code</a></h3>
-              <p>Making software build and run requires repairing dependencies, build settings, and compiler assumptions as well as source code. Build-bench evaluates cross-architecture repair on <strong>268 real-world failed packages</strong> (<a href="https://dl.acm.org/doi/10.1145/3816153">TOSEM'26</a>); EvidenT helps repair agents retain evidence across attempts (<a href="https://arxiv.org/abs/2605.08621">ISSTA'26</a>). Dr. Ma co-organizes the <a href="https://matrix.cstcloud.cn/build-bench/">ICSE 2027 Build-Bench Challenge</a> based on this work.</p>
-            </div>
-          </div>
-          <div class="project-card" id="triangle">
-            <div class="project-icon"><i class="fas fa-project-diagram" aria-hidden="true"></i></div>
-            <div class="project-content">
-              <h3><a href="https://azure.microsoft.com/en-us/blog/optimizing-incident-management-with-aiops-using-the-triangle-system/">Triangle</a></h3>
-              <p><strong>Project lead.</strong> AI-assisted incident triage for Azure (<a href="https://doi.org/10.1109/ase63991.2025.00062">ASE'25</a>, <a href="https://dl.acm.org/doi/10.1145/3803437.3805228">FSE'26</a>). Its local triage system has operated in production since mid-2024, with <strong>more than 30 major Azure services</strong> using Triangle as of October 2026. Highlighted by Azure CTO Mark Russinovich in the Advancing Reliability blog.</p>
-              <p>Related work: interpretable triage (<a href="https://doi.org/10.1109/issre62328.2024.00056">ISSRE'24</a>, <a href="https://dl.acm.org/doi/10.1145/3786583.3786887">ICSE-SEIP'26</a>) and a <a href="https://arxiv.org/abs/2511.08607">survey of triage in software engineering</a>.</p>
-            </div>
-          </div>
-          <div class="project-card">
-            <div class="project-icon"><i class="fas fa-flask" aria-hidden="true"></i></div>
-            <div class="project-content">
-              <h3><a href="https://microsoft.github.io/AIOpsLab/">AIOpsLab</a></h3>
-              <p>An open framework for testing AI agents on realistic cloud failures, with running microservices, fault injection, workloads, and telemetry. Used in courses at the University of Illinois Urbana-Champaign and the Indian Institute of Science, Bangalore. The <a href="https://github.com/microsoft/AIOpsLab">repository</a> had <strong>1,006 stars and 178 forks</strong> as of October 13, 2026.</p>
-              <p>Design principles (<a href="https://dl.acm.org/doi/10.1145/3698038.3698525">SoCC'24</a>), evaluation framework (<a href="https://www.microsoft.com/en-us/research/publication/aiopslab-a-holistic-framework-for-evaluating-ai-agents-for-enabling-autonomous-cloud/">MLSys'25</a>), and tutorial (<a href="https://dl.acm.org/doi/10.1145/3696630.3728619">FSE'25</a>).</p>
-            </div>
-          </div>
-          <div class="project-card" id="ufo">
-            <div class="project-icon"><i class="fas fa-desktop" aria-hidden="true"></i></div>
-            <div class="project-content">
-              <h3><a href="https://github.com/microsoft/UFO">UFO: AI Agents for Windows Applications</a></h3>
-              <p><strong>Main contributor.</strong> An open-source agent that carries out user requests through Windows application interfaces. The <a href="https://github.com/microsoft/UFO">repository</a> had <strong>10,005 stars and 1,071 forks</strong> as of October 13, 2026.</p>
-              <p>Research paper (<a href="https://aclanthology.org/2025.naacl-long.26/">NAACL'25</a>) and <a href="https://microsoft.github.io/UFO/">project homepage</a>.</p>
-            </div>
-          </div>
-        </div>
 
         <h2 id="news">News</h2>
 
@@ -287,6 +252,37 @@
         </div>
         <button type="button" class="news-toggle" id="news-toggle" aria-controls="news-cards" aria-expanded="false" onclick="toggleNews()">Show more</button>
 
+        <h2 id="research-highlights">Research Highlights</h2>
+
+        <div class="featured-projects">
+          <div class="project-card">
+            <div class="project-content">
+              <h3>AI-Assisted Debugging and Incident Response</h3>
+              <p>Helping engineers investigate software failures and helping AI agents recover when a debugging or repair attempt fails. This research includes agent recovery (<a href="https://arxiv.org/abs/2605.08717">ASE'26</a>), troubleshooting-guide generation (<a href="https://dl.acm.org/doi/10.1145/3803437.3805239">FSE'26</a>), and studies of how AI assistance affects engineers' investigation decisions.</p>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-content">
+              <h3>Software Repair Beyond Code: Build-bench and EvidenT</h3>
+              <p>Making software build and run requires repairing dependencies, build settings, and compiler assumptions as well as source code. This research addresses both evaluation and repair: <a href="https://buildbench-hub.github.io/buildbench.github.io/">Build-bench</a> evaluates cross-architecture repair on <strong>268 real-world failed packages</strong> (<a href="https://dl.acm.org/doi/10.1145/3816153">TOSEM'26</a>), while EvidenT helps repair agents retain evidence across attempts (<a href="https://arxiv.org/abs/2605.08621">ISSTA'26</a>). Dr. Ma co-organizes the <a href="https://matrix.cstcloud.cn/build-bench/">ICSE 2027 Build-Bench Challenge</a> based on this work.</p>
+            </div>
+          </div>
+          <div class="project-card" id="triangle">
+            <div class="project-content">
+              <h3><a href="https://azure.microsoft.com/en-us/blog/optimizing-incident-management-with-aiops-using-the-triangle-system/">Triangle</a></h3>
+              <p><strong>Project lead.</strong> AI-assisted incident triage for Azure (<a href="https://doi.org/10.1109/ase63991.2025.00062">ASE'25</a>, <a href="https://dl.acm.org/doi/10.1145/3803437.3805228">FSE'26</a>). Its local triage system has operated in production since mid-2024, with <strong>more than 30 major Azure services</strong> using Triangle as of October 2026. Highlighted by Azure CTO Mark Russinovich in the Advancing Reliability blog.</p>
+              <p>Related work: interpretable triage (<a href="https://doi.org/10.1109/issre62328.2024.00056">ISSRE'24</a>, <a href="https://dl.acm.org/doi/10.1145/3786583.3786887">ICSE-SEIP'26</a>) and a <a href="https://arxiv.org/abs/2511.08607">survey of triage in software engineering</a>.</p>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-content">
+              <h3><a href="https://microsoft.github.io/AIOpsLab/">AIOpsLab</a></h3>
+              <p>An <a href="https://github.com/microsoft/AIOpsLab">open-source framework</a> for evaluating AI agents on realistic cloud failures. It combines running microservices, fault injection, workloads, and telemetry to test agents in operational environments. Used in courses at the University of Illinois Urbana-Champaign and the Indian Institute of Science, Bangalore.</p>
+              <p>Design principles (<a href="https://dl.acm.org/doi/10.1145/3698038.3698525">SoCC'24</a>), evaluation framework (<a href="https://www.microsoft.com/en-us/research/publication/aiopslab-a-holistic-framework-for-evaluating-ai-agents-for-enabling-autonomous-cloud/">MLSys'25</a>), and tutorial (<a href="https://dl.acm.org/doi/10.1145/3696630.3728619">FSE'25</a>).</p>
+            </div>
+          </div>
+        </div>
+
         <h2 id="experience">Experience</h2>
 
         <div class="exp-list">
@@ -359,7 +355,7 @@
           <li><strong>Organizer</strong>
             <ul>
               <li><a href="https://matrix.cstcloud.cn/build-bench/">ICSE 2027 Build-Bench Challenge</a>: <strong>Co-organizer</strong></li>
-              <li><a href="https://conf.researchr.org/home/saner-2027">SANER 2027</a>: <strong>Tool Demo Track Co-Chair</strong> (appointed)</li>
+              <li><a href="https://conf.researchr.org/home/saner-2027">SANER 2027</a>: <strong>Tool Demo Track Co-Chair</strong></li>
               <li><a href="https://conf.researchr.org/home/ease-2026">EASE 2026</a>: <strong>Industry Track Co-Chair</strong></li>
               <li><a href="https://competition.aiops.cn/">The 4th CCF AIOps Challenge</a>: <strong>Technical Chair</strong></li>
             </ul>
@@ -699,7 +695,7 @@ function switchView(view) {
 }
 
 /* ---- Load and render ---- */
-fetch('/data/publications.yml?v=20260916-distinguished-paper')
+fetch('/data/publications.yml?v=20261029-topic-fix')
   .then(function(r) {
     if (!r.ok) throw new Error('HTTP ' + r.status);
     return r.text();
